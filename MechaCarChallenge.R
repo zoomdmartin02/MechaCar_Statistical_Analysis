@@ -27,6 +27,9 @@ Suspension_Coils_Table <- read.csv(file='Suspension_Coil.csv',check.names=F,stri
 total_summary <- Suspension_Coils_Table %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep') #create summary table
 lot_summary <- Suspension_Coils_Table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep') #create summary table
 
+plt <- ggplot(Suspension_Coils_Table,aes(x=Manufacturing_Lot,y=PSI,color=Manufacturing_Lot)) #boxplot of PSI by lots
+plt + geom_boxplot() + theme(axis.text.x=element_text(angle=45,hjust=1)) #add boxplot with labels rotated 45 degrees
+
 # Deliverable 3
 
 t.test((Suspension_Coils_Table$PSI),mu=mean(1500)) #compare population versus mean of 1500

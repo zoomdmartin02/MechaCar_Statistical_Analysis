@@ -24,7 +24,7 @@ Linear Regressions show the relationship between a dependent variable and one or
 ![Linear Regression to Predict MPG](Resources/Linear_Regression_1.png)
 
 ### P-Values of Independent Variables
-According to the above plots for visual reference and Linear Regression output of our linear regression test, the following independent variables provided significant non-random amount of variance to the mpg values in the dataset.  This is known by the "P-Value", which generally is used to indicate whether the probability of correlation when significant is some number less than 0.05:
+According to the above plots for visual reference and Summary Statistics of our linear regression test, the following independent variables provided significant non-random amount of variance to the mpg values in the dataset.  This is known by the "P-Value", which generally is used to indicate whether the probability of correlation when significant is some number less than 0.05:
 * vehicle length; **P-Value of 2.60e-12**
 * ground clearance; **P-Value of 5.21e-08**
 
@@ -47,11 +47,18 @@ While this linear model does show some strength toward predictability of mpg of 
 
 [Coils_Table](Resources/Suspension_Coils_Table.png)
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. The question we shall explore is, does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually?
 
 ![Total_Summary](Resources/Total_Summary.png)
 
+The summary statistics of the total population does indicate the population of suspension coils do not exceed 100 pounds per square inch with a variance reading of 62.29.
+
+However, when you look at the statistics or the box plot by Lot, a different story emerges.
+![Box Plot by Lot](Resources/PSI_Variance_by_Lot.png)
+
 ![Lot_Summary](Resources/Lot_Summary.png)
+
+Clearly, there is a problem with the 3rd Lot.  A review of materials or manufacturing process associated with Lot 3 should be undertaken immediately.  This lot falls outside of the PSI allowable tolerance.
 
 ## T-Tests on Suspension Coils
 ![Lot1_T.Test](Resources/Lot1_t_test.png)
