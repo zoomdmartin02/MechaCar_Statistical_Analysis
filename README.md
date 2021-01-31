@@ -23,9 +23,10 @@ Linear Regressions show the relationship between a dependent variable and one or
 ![AWD](Resources/Rplot04.png)
 ![Linear Regression to Predict MPG](Resources/Linear_Regression_1.png)
 
+### P-Values of Independent Variables
 According to the above plots for visual reference and Linear Regression output of our linear regression test, the following independent variables provided significant non-random amount of variance to the mpg values in the dataset.  This is known by the "P-Value", which generally is used to indicate whether the probability of correlation when significant is some number less than 0.05:
-* vehicle length; P-Value of 2.60e-12
-* ground clearance; P-Value of 5.21e-08
+* vehicle length; **P-Value of 2.60e-12**
+* ground clearance; **P-Value of 5.21e-08**
 
 Note:  vehicle weight also likely has some impact, but the significance is only slight; P-Value of 0.0776
 
@@ -33,11 +34,14 @@ The following independent variables did not show non-random effect on MPG:
 * Spoiler Angle; P-Value of 0.3069
 * AWD; P-Value of 0.1852
 
-It should also be noted that the (Intercept) is also showing non-random amount of variance to the mpg values.  Per bootcamp text,
- > When an intercept is statistically significant, it means there are other variables and factors that contribute to the variation in quarter-mile time that have not been included in our model. These variables may or may not be within our dataset and may  still need to be collected or observed."
+It should also be noted that the (Intercept) is also showing non-random amount of variance to the mpg values with a **P-Value of 5.08e-08**.  Per bootcamp text,
+ > **When an intercept is statistically significant, it means there are other variables and factors that contribute to the variation in MPG that have not been included in our model. These variables may or may not be within our dataset and may still need to be collected or observed.**
 
-* Is the slope of the linear model considered to be zero? Why or why not?
-* Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+### Multiple R-squared
+The slope of the linear model **IS NOT** considered to be zero. This is because of the statistic "Multiple R-Squared" which has a value in this case of **.7149.  This is a strong reading of the slope moving away from zero toward 1, which indicates that predictive capability of the analysis is strong.
+
+### Predictive Reliability
+While this linear model does show some strength toward predictability of mpg of MechaCar prototypes, there is still room for improvement.  While the Multiple R-Squared figure indicates 71% likelihood of predictability, as indicated above, the Intercept indicates that there are additional independent variables not in the data set still left to discover that have impact on MPG.
 
 ## Summary Statistics on Suspension Coils
 
