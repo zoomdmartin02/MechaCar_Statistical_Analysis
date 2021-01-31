@@ -33,7 +33,8 @@ The following independent variables did not show non-random effect on MPG:
 * Spoiler Angle; P-Value of 0.3069
 * AWD; P-Value of 0.1852
 
-It should also be noted that the (Intercept) is also showing non-random amount of variance to the mpg values.  Per bootcamp text, > When an intercept is statistically significant, it means there are other variables and factors that contribute to the variation in quarter-mile time that have not been included in our model. These variables may or may not be within our dataset and may  still need to be collected or observed."
+It should also be noted that the (Intercept) is also showing non-random amount of variance to the mpg values.  Per bootcamp text,
+ > When an intercept is statistically significant, it means there are other variables and factors that contribute to the variation in quarter-mile time that have not been included in our model. These variables may or may not be within our dataset and may  still need to be collected or observed."
 
 * Is the slope of the linear model considered to be zero? Why or why not?
 * Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
