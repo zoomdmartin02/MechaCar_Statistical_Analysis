@@ -6,6 +6,20 @@ MechaCar_table <- read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactor
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_table) #generate multiple linear regression model
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_table))
 
+plt <- ggplot(MechaCar_table,aes(x=vehicle_length,y=mpg)) #plot vehicle length vs mpg
+plt + geom_point() + geom_line(aes(y=mpg), color = "red") #plot scatter and linear model
+
+plt <- ggplot(MechaCar_table,aes(x=vehicle_weight,y=mpg)) #plot vehicle weight vs mpg
+plt + geom_point() + geom_line(aes(y=mpg), color = "red") #plot scatter and linear model
+
+plt <- ggplot(MechaCar_table,aes(x=spoiler_angle,y=mpg)) #plot spoiler angle vs mpg
+plt + geom_point() + geom_line(aes(y=mpg), color = "red") #plot scatter and linear model
+
+plt <- ggplot(MechaCar_table,aes(x=ground_clearance,y=mpg)) #plot ground clearance vs mpg
+plt + geom_point() + geom_line(aes(y=mpg), color = "red") #plot scatter and linear model
+
+plt <- ggplot(MechaCar_table,aes(x=AWD,y=mpg)) #plot AWD vs mpg
+plt + geom_point() + geom_line(aes(y=mpg), color = "red") #plot scatter and linear model
 # Deliverable 2
 Suspension_Coils_Table <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFactors = F)
 
