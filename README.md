@@ -63,7 +63,7 @@ Clearly, there is a problem with the 3rd Lot.  The variance for Lot 3 does not f
 ## T-Tests on Suspension Coils
 T.Tests can be used to test the following hypoteses:
 > * H0 : There is no statistical difference between the observed sample mean and its presumed population mean.
-* Ha : There is a statistical difference between the observed sample mean and its presumed population mean.
+> * Ha : There is a statistical difference between the observed sample mean and its presumed population mean.
 
 ![Lot1_T.Test](Resources/Lot1_t_test.png)
 
