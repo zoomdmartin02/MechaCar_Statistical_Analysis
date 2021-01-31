@@ -23,15 +23,17 @@ Linear Regressions show the relationship between a dependent variable and one or
 ![AWD](Resources/Rplot04.png)
 ![Linear Regression to Predict MPG](Resources/Linear_Regression_1.png)
 
-According to the above plots for visual reference and Linear Regression output of our linear regression test, the following independent variables provided significant non-random amount of variance to the mpg values in the dataset:
-* vehicle length
-* ground clearance
+According to the above plots for visual reference and Linear Regression output of our linear regression test, the following independent variables provided significant non-random amount of variance to the mpg values in the dataset.  This is known by the "P-Value", which generally is used to indicate whether the probability of correlation when significant is some number less than 0.05:
+* vehicle length; P-Value of 2.60e-12
+* ground clearance; P-Value of 5.21e-08
 
-Note:  vehicle weight also likely has some impact, but the significance is only slight.
+Note:  vehicle weight also likely has some impact, but the significance is only slight; P-Value of 0.0776
 
 The following independent variables did not show non-random effect on MPG:
-* Spoiler Angle
-* AWD
+* Spoiler Angle; P-Value of 0.3069
+* AWD; P-Value of 0.1852
+
+It should also be noted that the (Intercept) is also showing non-random amount of variance to the mpg values.  Per bootcamp text, > When an intercept is statistically significant, it means there are other variables and factors that contribute to the variation > in quarter-mile time that have not been included in our model. These variables may or may not be within our dataset and may  still need to be collected or observed."
 
 * Is the slope of the linear model considered to be zero? Why or why not?
 * Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
@@ -40,7 +42,7 @@ The following independent variables did not show non-random effect on MPG:
 
 [Coils_Table](Resources/Suspension_Coils_Table.png)
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+> The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
 ![Total_Summary](Resources/Total_Summary.png)
 
