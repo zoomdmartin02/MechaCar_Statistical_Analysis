@@ -23,9 +23,9 @@ The design specifications for the MechaCar suspension coils dictate that the var
 ![Lot_Summary](Resources/Lot_Summary.png)
 
 ## T-Tests on Suspension Coils
-![Lot1_T.Test](Resources/Lot1_T_Test.png)
-![Lot2_T.Test](Resources/Lot2_T_Test.png)
-![Lot3_T.Test](Resources/Lot3_T_Test.png)
+![Lot1_T.Test](Resources/Lot1_t_test.png)
+![Lot2_T.Test](Resources/Lot2_t_test.png)
+![Lot3_T.Test](Resources/Lot3_t_test.png)
 
 briefly summarize your interpretation and findings for the t-test results.
 
