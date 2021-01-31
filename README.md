@@ -61,7 +61,7 @@ However, when you look at the statistics or the box plot by Lot, a different sto
 Clearly, there is a problem with the 3rd Lot.  The variance for Lot 3 does not fall within 100 PSI, but is as high as 170 PSI.  A review of materials or manufacturing process associated with Lot 3 should be undertaken immediately.  This lot falls outside of the PSI allowable tolerance.
 
 ## T-Tests on Suspension Coils
-T.Tests can be used to test the following hypoteses:
+T.Tests can be used to test the following hypotheses:
 > * H0 : There is no statistical difference between the observed sample mean and its presumed population mean.
 > * Ha : There is a statistical difference between the observed sample mean and its presumed population mean.
 
@@ -74,7 +74,7 @@ The T.Test verifies that the Lot 1 Mean PSI is statistically different from the 
 The T.Test verifies that the Lot 2 Mean PSI is statistically different from the Mean of the population with a P-Value of .0005911.  This would indicate that the population does have some variance.  In this case, the alternative hypothesis is supported.
 ![Lot3_T.Test](Resources/Lot3_t_test.png)
 
-The T.Test verifies that the Lot 3 Mean PSI is NOT statistically different from the Mean of the population with a P-Value of .1589.  This would indicate that the population does have some variance and that the variance also exists in Lot 3.  In this case, the null hypothesis is supported.
+The T.Test verifies that the Lot 3 Mean PSI is NOT statistically different from the Mean of the population with a P-Value of .1589.  This would indicate that the population does have some variance and that the source of the variance exists in Lot 3.  In this case, the null hypothesis is supported.
 
 ## Study Design: MechaCar vs Competition
 Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
