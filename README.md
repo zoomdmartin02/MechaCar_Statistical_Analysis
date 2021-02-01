@@ -77,9 +77,51 @@ The T.Test verifies that the Lot 2 Mean PSI is statistically different from the 
 The T.Test verifies that the Lot 3 Mean PSI is NOT statistically different from the Mean of the population with a P-Value of .1589.  This would indicate that the population does have some variance and that the source of the variance exists in Lot 3.  In this case, the null hypothesis is supported.
 
 ## Study Design: MechaCar vs Competition
-Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+
+While this study has provided some good insights about which factors affect MPG and discovered problems with coil production, a more thorough study of factors such as cost, fuel efficiency, maintenance cost and safety ratings of MechaCar compared to competitive products in the same class as MechaCar might prove more informative for the leadership team.  It is recommended that a study comparing MechaCar to competitors in the following areas be performed:
+
+* MSRP,
+* Actual Sales Price,
+* fuel efficiency, 
+* maintenance cost
+* package features and 
+* saftety rating.
+
+### Requested Data
+#### Dataset "A"
+For starters, I would want a full database of all new cars sold in the same class as the MechaCar for the previous 5 years.  This table should include MSRP, Actual Sales Price, fuel efficiency, package/features tier and safety rating.  The table should also include purchaser demographics information (year born, gender and annual income)
+
+#### Dataset "B"
+A second table should include the maintenance and repair records of all cars sold in the same class as the MechaCar over the previous 5 years.  Data elements should include manufacturer, make/model, date purchased, date of service, mileage readings at time of service, cost of repair or maintenance, descriptor of repair or maintenance needed and a boolean yes/no indicating all manufacturer recommended service has been performed as expected.
+
+
+### Analysis "A"
+#### Metrics to be Tested
+There are many tests that could be pursued with this set of data.  For brevity, I'll discuss analysis to determine if mark-downs from MSRP are different for any particular manufacturer and by package tier than the overall population.  
+
+To perform the analysis, I would mutate the table to create a calculated column of MSRP minus summary statistics.  I would mutate a second column to create a percentage for each markdown for every car sold.  I would then summarize the (mean, median, variance, standard deviation) of the markdown percentage calculated field for the population of all cars sold.  I would want the same metrics for subsets, filtered or grouped by manufacturer.
+
+#### Tested Hypotheses
+H-0:  The means of markdown percentages for all groups are equal.
+
+H-1:  At least one of the means of markdown percentages are different from all of the other groups.
+
+#### Statistical Tests and Needed Data
+The test used will be the two-way ANOVA test.  The dependent variable is the the markdown percentage.  The independent variables are manufacturer and package tier.
+
+### Analysis "B"
+#### Metrics to be Tested
+Again, many tests could be selected.  For brevity, analysis will be performed to see if there is a difference in overall cost to operate cars by manufacturer.  Overall cost to operate is depicted by the the total cost of recommended maintenance and any unscheduled repairs.
+
+To perform the analysis, a new column would be mutated to the table to calculate the total costs of all recommended maintenance and unscheduled repairs.  The mean, median, variance and standard deviation would be summarized for the total operating costs for the population (filtered for all records having met manufacturer recommended service milestones) as well as each sub group, which is the population grouped-by manufacturer and filtered to include all records where the all manufacturer recommended services = yes.
+
+#### Tested Hypotheses
+H-O:  There is no statistical difference between the observed sample mean and its presumed population mean (each manufacturer vs population).
+
+H-1:  There is a statistical difference between the observed sample mean and the presumed population mean (each manufacturer vs population).
+
+#### Statistical Tests and Needed Data
+As indicated above, the summary statistics would be performed for the population and each manufacturer, filtered sub-group.  A one-sample t-test will be performed for each manufacturer sub-group vs the population.
+
+## Conclusion
+While there are so many ways this data could be analyzed, the two tests described could provide information to the leadership team at AutosRUs to help them know what guidance to provide to dealers about what price levels are appropriate as compared to competitors.  Also, the data could also indicate the overall cost to operate for competitors and assist with goal setting for the MechaCar or influence decisions about parts selection or maintenance programs that could be sold along with the MechaCar when it rolls out to the show rooms.
